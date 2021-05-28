@@ -1,0 +1,491 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Actulgamestufff/coin.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Actulgamestufff/platformG.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Actulgamestufff/fullgrass.tscn" type="PackedScene" id=3]
+
+[node name="level1" type="Node2D"]
+
+[node name="coin" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, -32 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="coin2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 384, -32 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="coin3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 696, -136 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="coin4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 744, -136 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="coin5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 896, -56 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="coin6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1016, -56 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="coin7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1216, -112 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="coin8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1304, -64 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="coin9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1408, -24 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="coin10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1740.09, 47.685 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="coin12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1739.46, 29.7312 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="coin13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1759.62, 30.0461 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="coin11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1760, 48 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="platformG" parent="." instance=ExtResource( 2 )]
+position = Vector2( 288, -8 )
+
+[node name="platformG2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 384, -8 )
+
+[node name="platformG3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 840, -104 )
+
+[node name="platformG4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 912, -104 )
+
+[node name="platformG5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 816, -24 )
+
+[node name="platformG6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 864, -24 )
+
+[node name="platformG7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 912, -24 )
+
+[node name="platformG8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1016, -24 )
+
+[node name="platformG9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 984, -104 )
+
+[node name="platformG10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1056, -104 )
+
+[node name="platformG11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1216, -80 )
+
+[node name="platformG12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1304, -32 )
+
+[node name="platformG13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1408, 8 )
+
+[node name="platformG14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1960, 24 )
+
+[node name="platformG15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1864, 72 )
+
+[node name="platformG16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1752, 72 )
+
+[node name="platformG17" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2048, 72 )
+
+[node name="platformG18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2136, 56 )
+
+[node name="platformG19" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2216, 56 )
+
+[node name="fullgrass" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 24 )
+
+[node name="fullgrass2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 48, 24 )
+
+[node name="fullgrass3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 96, 24 )
+
+[node name="fullgrass4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 144, 24 )
+
+[node name="fullgrass5" parent="." instance=ExtResource( 3 )]
+position = Vector2( -48, 24 )
+
+[node name="fullgrass6" parent="." instance=ExtResource( 3 )]
+position = Vector2( -96, 24 )
+
+[node name="fullgrass7" parent="." instance=ExtResource( 3 )]
+position = Vector2( -144, 24 )
+
+[node name="fullgrass8" parent="." instance=ExtResource( 3 )]
+position = Vector2( -144, -24 )
+
+[node name="fullgrass9" parent="." instance=ExtResource( 3 )]
+position = Vector2( -144, -72 )
+
+[node name="fullgrass10" parent="." instance=ExtResource( 3 )]
+position = Vector2( -144, -120 )
+
+[node name="fullgrass11" parent="." instance=ExtResource( 3 )]
+position = Vector2( -144, -168 )
+
+[node name="fullgrass12" parent="." instance=ExtResource( 3 )]
+position = Vector2( -144, -216 )
+
+[node name="fullgrass13" parent="." instance=ExtResource( 3 )]
+position = Vector2( -96, -216 )
+
+[node name="fullgrass14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 192, 48 )
+
+[node name="fullgrass15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 240, 80 )
+
+[node name="fullgrass16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 288, 80 )
+
+[node name="fullgrass17" parent="." instance=ExtResource( 3 )]
+position = Vector2( 336, 80 )
+
+[node name="fullgrass18" parent="." instance=ExtResource( 3 )]
+position = Vector2( 384, 80 )
+
+[node name="fullgrass19" parent="." instance=ExtResource( 3 )]
+position = Vector2( 432, 80 )
+
+[node name="fullgrass20" parent="." instance=ExtResource( 3 )]
+position = Vector2( 480, 56 )
+
+[node name="fullgrass21" parent="." instance=ExtResource( 3 )]
+position = Vector2( 528, 56 )
+
+[node name="fullgrass22" parent="." instance=ExtResource( 3 )]
+position = Vector2( 576, 56 )
+
+[node name="fullgrass23" parent="." instance=ExtResource( 3 )]
+position = Vector2( 624, 56 )
+
+[node name="fullgrass24" parent="." instance=ExtResource( 3 )]
+position = Vector2( 576, -88 )
+
+[node name="fullgrass26" parent="." instance=ExtResource( 3 )]
+position = Vector2( 672, 56 )
+
+[node name="fullgrass27" parent="." instance=ExtResource( 3 )]
+position = Vector2( 672, 8 )
+
+[node name="fullgrass28" parent="." instance=ExtResource( 3 )]
+position = Vector2( 672, -40 )
+
+[node name="fullgrass29" parent="." instance=ExtResource( 3 )]
+position = Vector2( 672, -88 )
+
+[node name="fullgrass30" parent="." instance=ExtResource( 3 )]
+position = Vector2( 576, -136 )
+
+[node name="fullgrass31" parent="." instance=ExtResource( 3 )]
+position = Vector2( 576, -184 )
+
+[node name="fullgrass32" parent="." instance=ExtResource( 3 )]
+position = Vector2( 720, -88 )
+
+[node name="fullgrass33" parent="." instance=ExtResource( 3 )]
+position = Vector2( 768, -88 )
+
+[node name="fullgrass56" parent="." instance=ExtResource( 3 )]
+position = Vector2( 768, -88 )
+
+[node name="fullgrass57" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1128, -88 )
+
+[node name="fullgrass58" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1128, -40 )
+
+[node name="fullgrass59" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1128, 8 )
+
+[node name="fullgrass60" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1128, 96 )
+
+[node name="fullgrass61" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1176, 96 )
+
+[node name="fullgrass62" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1224, 96 )
+
+[node name="fullgrass63" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1272, 96 )
+
+[node name="fullgrass64" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1320, 96 )
+
+[node name="fullgrass65" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1368, 96 )
+
+[node name="fullgrass66" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1416, 96 )
+
+[node name="fullgrass67" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1464, 96 )
+
+[node name="fullgrass68" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1512, 96 )
+
+[node name="fullgrass69" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1560, 96 )
+
+[node name="fullgrass70" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1608, 96 )
+
+[node name="fullgrass71" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1656, 96 )
+
+[node name="fullgrass72" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1704, 96 )
+
+[node name="fullgrass73" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1704, 48 )
+
+[node name="fullgrass74" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1704, 0 )
+
+[node name="fullgrass75" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1704, -48 )
+
+[node name="fullgrass76" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1752, -48 )
+
+[node name="fullgrass77" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1800, -48 )
+
+[node name="fullgrass78" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1848, -48 )
+
+[node name="fullgrass79" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1896, -48 )
+
+[node name="fullgrass80" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2312, 112 )
+
+[node name="fullgrass81" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2360, 112 )
+
+[node name="fullgrass82" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2408, 112 )
+
+[node name="fullgrass83" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2456, 112 )
+
+[node name="fullgrass84" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2504, 112 )
+
+[node name="fullgrass85" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2552, 112 )
+
+[node name="fullgrass86" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2600, 112 )
+
+[node name="fullgrass94" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2648, 112 )
+
+[node name="fullgrass95" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2648, 64 )
+
+[node name="fullgrass96" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2648, 16 )
+
+[node name="fullgrass97" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2648, -32 )
+
+[node name="fullgrass98" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2648, -80 )
+
+[node name="fullgrass99" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2648, -128 )
+
+[node name="fullgrass100" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2600, -128 )
+
+[node name="fullgrass101" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2552, -128 )
+
+[node name="fullgrass87" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2600, 160 )
+
+[node name="fullgrass102" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2648, 160 )
+
+[node name="fullgrass103" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2696, 160 )
+
+[node name="fullgrass104" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2696, 112 )
+
+[node name="fullgrass105" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2696, 64 )
+
+[node name="fullgrass106" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2696, 16 )
+
+[node name="fullgrass107" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2696, -32 )
+
+[node name="fullgrass108" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2696, -80 )
+
+[node name="fullgrass109" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2696, -128 )
+
+[node name="fullgrass110" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2696, -176 )
+
+[node name="fullgrass111" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2648, -176 )
+
+[node name="fullgrass112" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2600, -176 )
+
+[node name="fullgrass113" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2552, -176 )
+
+[node name="fullgrass88" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2552, 160 )
+
+[node name="fullgrass89" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2504, 160 )
+
+[node name="fullgrass90" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2456, 160 )
+
+[node name="fullgrass91" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2408, 160 )
+
+[node name="fullgrass92" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2360, 160 )
+
+[node name="fullgrass93" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2312, 160 )
+
+[node name="fullgrass34" parent="." instance=ExtResource( 3 )]
+position = Vector2( 720, -40 )
+
+[node name="fullgrass55" parent="." instance=ExtResource( 3 )]
+position = Vector2( 768, -40 )
+
+[node name="fullgrass35" parent="." instance=ExtResource( 3 )]
+position = Vector2( 720, 8 )
+
+[node name="fullgrass36" parent="." instance=ExtResource( 3 )]
+position = Vector2( 720, 56 )
+
+[node name="fullgrass37" parent="." instance=ExtResource( 3 )]
+position = Vector2( 672, 104 )
+
+[node name="fullgrass38" parent="." instance=ExtResource( 3 )]
+position = Vector2( 624, 104 )
+
+[node name="fullgrass39" parent="." instance=ExtResource( 3 )]
+position = Vector2( 576, 104 )
+
+[node name="fullgrass40" parent="." instance=ExtResource( 3 )]
+position = Vector2( 528, 104 )
+
+[node name="fullgrass41" parent="." instance=ExtResource( 3 )]
+position = Vector2( 480, 104 )
+
+[node name="fullgrass42" parent="." instance=ExtResource( 3 )]
+position = Vector2( 432, 128 )
+
+[node name="fullgrass43" parent="." instance=ExtResource( 3 )]
+position = Vector2( 384, 128 )
+
+[node name="fullgrass44" parent="." instance=ExtResource( 3 )]
+position = Vector2( 336, 128 )
+
+[node name="fullgrass45" parent="." instance=ExtResource( 3 )]
+position = Vector2( 288, 128 )
+
+[node name="fullgrass46" parent="." instance=ExtResource( 3 )]
+position = Vector2( 240, 128 )
+
+[node name="fullgrass47" parent="." instance=ExtResource( 3 )]
+position = Vector2( 192, 96 )
+
+[node name="fullgrass48" parent="." instance=ExtResource( 3 )]
+position = Vector2( 144, 72 )
+
+[node name="fullgrass49" parent="." instance=ExtResource( 3 )]
+position = Vector2( 96, 72 )
+
+[node name="fullgrass50" parent="." instance=ExtResource( 3 )]
+position = Vector2( 48, 72 )
+
+[node name="fullgrass51" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 72 )
+
+[node name="fullgrass52" parent="." instance=ExtResource( 3 )]
+position = Vector2( -48, 72 )
+
+[node name="fullgrass53" parent="." instance=ExtResource( 3 )]
+position = Vector2( -96, 72 )
+
+[node name="fullgrass54" parent="." instance=ExtResource( 3 )]
+position = Vector2( -144, 72 )
+
+[node name="fullgrass114" parent="." instance=ExtResource( 3 )]
+position = Vector2( -192, 72 )
+
+[node name="fullgrass115" parent="." instance=ExtResource( 3 )]
+position = Vector2( -192, 24 )
+
+[node name="fullgrass116" parent="." instance=ExtResource( 3 )]
+position = Vector2( -192, -24 )
+
+[node name="fullgrass117" parent="." instance=ExtResource( 3 )]
+position = Vector2( -192, -72 )
+
+[node name="fullgrass118" parent="." instance=ExtResource( 3 )]
+position = Vector2( -192, -120 )
+
+[node name="fullgrass119" parent="." instance=ExtResource( 3 )]
+position = Vector2( -192, -168 )
+
+[node name="fullgrass120" parent="." instance=ExtResource( 3 )]
+position = Vector2( -192, -216 )
+
+[node name="fullgrass121" parent="." instance=ExtResource( 3 )]
+position = Vector2( -192, -264 )
+
+[node name="fullgrass122" parent="." instance=ExtResource( 3 )]
+position = Vector2( -144, -264 )
+
+[node name="fullgrass123" parent="." instance=ExtResource( 3 )]
+position = Vector2( -96, -264 )
+
+[node name="fullgrass124" parent="." instance=ExtResource( 3 )]
+position = Vector2( -48, -216 )
+
+[node name="fullgrass125" parent="." instance=ExtResource( 3 )]
+position = Vector2( -48, -264 )
+
+[node name="fullgrass25" parent="." instance=ExtResource( 3 )]
+position = Vector2( 576, -40 )
