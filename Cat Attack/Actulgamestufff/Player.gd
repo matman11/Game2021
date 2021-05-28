@@ -14,7 +14,7 @@ var jumpwall = 70
 func _ready():
 	pass 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	
 	
 

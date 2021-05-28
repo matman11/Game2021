@@ -126,3 +126,5 @@ shape = SubResource( 1 )
 autoplay = "coin1"
 anims/Ctaken = SubResource( 2 )
 anims/coin1 = SubResource( 3 )
+
+[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
