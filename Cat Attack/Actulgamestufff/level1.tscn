@@ -113,10 +113,10 @@ position = Vector2( 2048, 72 )
 position = Vector2( 2136, 56 )
 
 [node name="fullgrass" parent="." instance=ExtResource( 3 )]
-position = Vector2( 47.4689, 72 )
+position = Vector2( 48.4053, 72 )
 
 [node name="fullgrass2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 0, 23.7312 )
+position = Vector2( 0, 23.9296 )
 
 [node name="fullgrass3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 96, 24 )
@@ -219,6 +219,9 @@ position = Vector2( 1128, -40 )
 
 [node name="fullgrass59" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1128, 8 )
+
+[node name="fullgrass135" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1128.94, 54.7218 )
 
 [node name="fullgrass60" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1128, 96 )
@@ -461,10 +464,10 @@ position = Vector2( 144, 72 )
 position = Vector2( 96, 72 )
 
 [node name="fullgrass50" parent="." instance=ExtResource( 3 )]
-position = Vector2( 47.4689, 23.7312 )
+position = Vector2( 48.2181, 24.0461 )
 
 [node name="fullgrass51" parent="." instance=ExtResource( 3 )]
-position = Vector2( 0, 72 )
+position = Vector2( 0, 72.3969 )
 
 [node name="fullgrass52" parent="." instance=ExtResource( 3 )]
 position = Vector2( -48, 72 )
