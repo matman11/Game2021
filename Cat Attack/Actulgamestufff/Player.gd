@@ -5,7 +5,7 @@ const GRAVITY = 20
 const MAXFALLSPEED = 200
 const MAXSPEED = 150
 const JUMPFORCE = 320
-
+export var health = 5
 var jumpcount = 0
 var motion = Vector2()
 var facing_right = true
@@ -74,3 +74,7 @@ func nextToRightWall():
 
 func nextToLeftWall():
 	return $leftwall.is_colliding()
+	
+func _on_hitbox_area_entered(body):
+	if body.name == ("Slime"):
+		queue_free()

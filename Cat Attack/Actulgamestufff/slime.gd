@@ -1,10 +1,12 @@
 extends KinematicBody2D
 var velocity = Vector2()
 export var direction = -1
+var damage = 1
 
 
 func _ready():
 	$AnimationPlayer.play("idle")
+
 
 	
 	
@@ -21,12 +23,5 @@ func _physics_process(delta):
 	velocity.x = 50 * direction
 	
 	velocity = move_and_slide(velocity, Vector2.UP)
-	
-
-
-	
-
-	
-	
 	
 

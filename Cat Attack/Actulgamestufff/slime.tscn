@@ -4,7 +4,7 @@
 [ext_resource path="res://Actulgamestufff/slime.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 17.5714, 7.96525 )
+extents = Vector2( 12.9503, 7.20543 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "attck"
@@ -71,6 +71,8 @@ tracks/0/keys = {
 }
 
 [node name="Slime" type="KinematicBody2D"]
+collision_layer = 16
+collision_mask = 3
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -81,6 +83,7 @@ vframes = 3
 frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 0.72838 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -99,4 +102,9 @@ enabled = true
 position = Vector2( -5.216, 0 )
 rotation = -1.5708
 scale = Vector2( 1, 0.5 )
+enabled = true
+
+[node name="damage" type="RayCast2D" parent="."]
+position = Vector2( 0, 5.82705 )
+scale = Vector2( 5.12, -0.2 )
 enabled = true

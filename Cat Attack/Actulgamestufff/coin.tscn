@@ -111,7 +111,8 @@ tracks/3/keys = {
 "values": [ false, false ]
 }
 
-[node name="Area2D" type="Area2D"]
+[node name="coin" type="Area2D"]
+collision_layer = 8
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
