@@ -74,7 +74,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=6]
-radius = 23.3238
+radius = 12.1067
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 0, -20 )
@@ -90,7 +90,7 @@ smoothing_enabled = true
 texture = ExtResource( 1 )
 hframes = 9
 vframes = 6
-frame = 22
+frame = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 2.5, 6.5 )
@@ -116,8 +116,9 @@ cast_to = Vector2( 0, 15 )
 
 [node name="hitbox" type="Area2D" parent="."]
 position = Vector2( 2.5, 6.5 )
+collision_mask = 16
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+[node name="boxhit" type="CollisionShape2D" parent="hitbox"]
 shape = SubResource( 6 )
 
-[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
