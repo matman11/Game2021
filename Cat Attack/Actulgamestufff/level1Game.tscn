@@ -7,10 +7,23 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1481.11, 31.2179 )
+position = Vector2( -88.6433, -30.6208 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="level1" parent="." instance=ExtResource( 1 )]
 
 [node name="Slime" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1624.27, -12.0031 )
+position = Vector2( 1629.69, 61.5007 )
+
+[node name="Slime4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1197.05, 58.978 )
+
+[node name="Slime5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1456.47, 58.1371 )
+scale = Vector2( 1, 1.07549 )
+
+[node name="Slime2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 420.586, 45.6264 )
+
+[node name="Slime3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 242.25, 46.1303 )

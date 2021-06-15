@@ -10,3 +10,6 @@ func _on_Area2D_body_entered(body):
 			yield($AnimationPlayer, "animation_finished")
 			queue_free()
 
+
+
+
