@@ -40,11 +40,11 @@ position = Vector2( 1546.82, -68.7238 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1871.43, 69.9178 )
+position = Vector2( 1865.43, 75.9178 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2062.67, 118.975 )
+position = Vector2( 2068.67, 169.709 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin7" parent="." instance=ExtResource( 3 )]
@@ -52,43 +52,43 @@ position = Vector2( 2272.15, -50.3559 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1941.67, -409.809 )
+position = Vector2( 1941.67, -403.809 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1941.67, -457.164 )
+position = Vector2( 1941.67, -433.38 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin10" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2666.86, -314.62 )
+position = Vector2( 2666.86, -308.62 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin11" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3078.9, 163.709 )
+position = Vector2( 3078.9, 169.709 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin12" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3044.43, 163.709 )
+position = Vector2( 3044.43, 169.709 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin13" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3934.27, -30.3559 )
+position = Vector2( 3934.27, -24.3559 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin14" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4405.73, -30.3559 )
+position = Vector2( 4405.73, -24.3559 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin15" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6265.73, -596.086 )
+position = Vector2( 6265.73, -590.086 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin16" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6454.6, -596.086 )
+position = Vector2( 6454.6, -590.086 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin17" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6507.61, -1123.58 )
+position = Vector2( 6504.7, -1118.71 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin18" parent="." instance=ExtResource( 3 )]
@@ -96,15 +96,15 @@ position = Vector2( 6936.16, -1027.08 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin19" parent="." instance=ExtResource( 3 )]
-position = Vector2( 5854.6, -1181.44 )
+position = Vector2( 5785.45, -1171.12 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin20" parent="." instance=ExtResource( 3 )]
-position = Vector2( 5801.15, -1181.44 )
+position = Vector2( 5686.69, -1171.12 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin21" parent="." instance=ExtResource( 3 )]
-position = Vector2( 5753.04, -1181.44 )
+position = Vector2( 5592.56, -1171.12 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Slime" parent="." instance=ExtResource( 4 )]
@@ -132,7 +132,7 @@ position = Vector2( 5472.72, -108.15 )
 position = Vector2( 5641.74, -108.15 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 6741.17, -1100.35 )
+position = Vector2( 2074.67, -427.38 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="death2" type="Area2D" parent="."]
