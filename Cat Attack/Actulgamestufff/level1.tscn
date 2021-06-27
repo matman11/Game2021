@@ -38,7 +38,7 @@ position = Vector2( 288, -32 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 384, -32 )
+position = Vector2( 384.532, -32 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin3" parent="." instance=ExtResource( 1 )]
@@ -50,7 +50,7 @@ position = Vector2( 744, -136 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 896, -56 )
+position = Vector2( 864, -56 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin6" parent="." instance=ExtResource( 1 )]
@@ -62,27 +62,27 @@ position = Vector2( 1216, -112 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin8" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1304, -64 )
+position = Vector2( 1304, -62 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin9" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1408, -24 )
+position = Vector2( 1408, -16 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin10" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1740.09, 47.685 )
+position = Vector2( 1742, 54.7218 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin12" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1739.46, 29.7312 )
+position = Vector2( 1742, 40 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin13" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1759.62, 30.0461 )
+position = Vector2( 1760.92, 40 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="coin11" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1760, 48 )
+position = Vector2( 1760.92, 54.7218 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="platformG" parent="." instance=ExtResource( 2 )]
@@ -604,5 +604,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[connection signal="coin_collected" from="coin" to="CHUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coin2" to="CHUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coin3" to="CHUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coin4" to="CHUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coin5" to="CHUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coin6" to="CHUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coin7" to="CHUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coin8" to="CHUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coin9" to="CHUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coin10" to="CHUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coin12" to="CHUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coin13" to="CHUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coin11" to="CHUD" method="_on_coin_coin_collected"]
 [connection signal="body_entered" from="deathZ" to="deathZ" method="_on_deathZ_body_entered"]
 [connection signal="body_entered" from="Winarea" to="Winarea" method="_on_Winarea_body_entered"]

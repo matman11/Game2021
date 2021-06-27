@@ -132,7 +132,7 @@ position = Vector2( 5472.72, -108.15 )
 position = Vector2( 5641.74, -108.15 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2074.67, -427.38 )
+position = Vector2( 83.0948, -108.15 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="death2" type="Area2D" parent="."]
