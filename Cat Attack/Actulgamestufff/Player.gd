@@ -4,7 +4,7 @@ const UP = Vector2(0, -1)
 const GRAVITY = 20
 const MAXFALLSPEED = 200
 const MAXSPEED = 150
-const JUMPFORCE = 320
+const JUMPFORCE = 325
 var health = 2
 var jumpcount = 0
 var motion = Vector2()
@@ -27,6 +27,7 @@ func _physics_process(_delta):
 	else:
 		$Sprite.scale.x = -1
 		
+	
 	
 	if Input.is_action_pressed("right"):
 		motion.x = MAXSPEED
@@ -88,3 +89,16 @@ func _on_hitbox_body_entered(body):
 		get_tree().reload_current_scene()
 		
 
+
+
+	
+
+
+
+
+func _on_Swordhit_body_entered(body):
+	if Input.is_action_just_pressed("leftclick"):
+		$AnimationPlayer.play("attack") 
+	if Input.is_action_just_pressed("leftclick") and body.name == ("Slime"):
+		$AnimationPlayer.play("attack") 
+		print("I attacked slime")
