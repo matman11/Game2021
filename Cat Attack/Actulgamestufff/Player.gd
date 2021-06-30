@@ -55,7 +55,7 @@ func _physics_process(_delta):
 	if is_on_floor() or nextToWall():
 		jumpcount = 1
 		
-			
+	
 			
 	
 	if !is_on_floor():
@@ -82,23 +82,15 @@ func nextToLeftWall():
 func _on_hitbox_body_entered(body):
 	if body.name == ("Slime"):
 		health -= 1 
-		
-		
 		print(health)
+		
 	if body.name == ("Slime") and health == 0:
 		get_tree().reload_current_scene()
 		
 
 
-
-	
-
-
-
-
-func _on_Swordhit_body_entered(body):
-	if Input.is_action_just_pressed("leftclick"):
-		$AnimationPlayer.play("attack") 
-	if Input.is_action_just_pressed("leftclick") and body.name == ("Slime"):
-		$AnimationPlayer.play("attack") 
-		print("I attacked slime")
+func _on_swordhit_area_entered(area):
+	if area.is_in_group("hurtbox"):
+		if Input.is_action_pressed("leftclick"):
+			$AnimationPlayer.play("attack")
+			print("attack was done")
