@@ -35,8 +35,4 @@ func _physics_process(delta):
 
 
 
-func _on_hurtbox_area_entered(area):
-	if area.name == ("swordhit") and Input.is_action_just_pressed("leftclick"):
-		$AnimationPlayer.play("death")
-		print("i was hit")
-		
+

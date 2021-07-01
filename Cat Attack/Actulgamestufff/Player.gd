@@ -11,6 +11,7 @@ var motion = Vector2()
 var facing_right = true
 var walljump = 500
 var jumpwall = 70
+var attacking = false
 func _ready():
 	pass 
 
@@ -29,6 +30,9 @@ func _physics_process(_delta):
 		
 	
 	
+
+		
+		
 	if Input.is_action_pressed("right"):
 		motion.x = MAXSPEED
 		facing_right = true 
@@ -64,7 +68,7 @@ func _physics_process(_delta):
 		elif motion.y > 0:
 			$AnimationPlayer.play("falling")
 		
-	
+	melee()
 	motion = move_and_slide(motion, UP)
 
 func nextToWall():
@@ -89,8 +93,20 @@ func _on_hitbox_body_entered(body):
 		
 
 
-func _on_swordhit_area_entered(area):
-	if area.is_in_group("hurtbox"):
-		if Input.is_action_pressed("leftclick"):
-			$AnimationPlayer.play("attack")
-			print("attack was done")
+func melee():
+	if Input.is_action_just_pressed("leftclick"):
+		var checkenemy = $Sprite/swordhit.get_overlapping_bodies()
+		attacking = true
+		print("attacking")
+		for slime in checkenemy:
+			if slime.is_in_group("hurtbox"):
+				print("dead")
+				slime.queue_free()
+				
+				
+		attacking = false
+				
+				
+				
+				
+	
