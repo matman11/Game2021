@@ -278,9 +278,10 @@ position = Vector2( 0, -3.93726 )
 texture = ExtResource( 1 )
 hframes = 8
 vframes = 3
-frame = 9
+frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, 0.72838 )
 shape = SubResource( 1 )
 
@@ -291,18 +292,21 @@ anims/idle = SubResource( 4 )
 anims/siide = SubResource( 5 )
 
 [node name="leftwall" type="RayCast2D" parent="."]
+visible = false
 position = Vector2( 5.03969, 0 )
 rotation = 1.5708
 scale = Vector2( 1, 0.5 )
 enabled = true
 
 [node name="rightwall" type="RayCast2D" parent="."]
+visible = false
 position = Vector2( -5.216, 0 )
 rotation = -1.5708
 scale = Vector2( 1, 0.5 )
 enabled = true
 
 [node name="damagedeal" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="damagedeal"]
 shape = SubResource( 6 )
@@ -310,6 +314,7 @@ shape = SubResource( 6 )
 [node name="hurtbox" type="Area2D" parent="." groups=[
 "hurtbox",
 ]]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
 position = Vector2( 0, 0.72838 )

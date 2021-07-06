@@ -12,6 +12,7 @@ var facing_right = true
 var walljump = 500
 var jumpwall = 70
 var attacking = false
+var dashatt = 250
 func _ready():
 	pass 
 
@@ -33,12 +34,27 @@ func _physics_process(_delta):
 
 		
 		
-	if Input.is_action_pressed("right"):
+	
+		
+		
+	if Input.is_action_pressed("rightclick"):
+		$AnimationPlayer.play("attack2")
+		
+																												
+			
+	if Input.is_action_pressed("right") and Input.is_action_pressed("rightclick"):
+		motion.x = -dashatt
+		facing_right == true
+	if Input.is_action_pressed("left") and Input.is_action_just_pressed("rightclick"):
+		motion.x = dashatt
+		facing_right == false
+
+
+	if Input.is_action_pressed("right") and not Input.is_action_pressed("rightclick"):
 		motion.x = MAXSPEED
 		facing_right = true 
 		$AnimationPlayer.play("run")
-		
-	elif Input.is_action_pressed("left"):
+	elif Input.is_action_pressed("left") and not Input.is_action_pressed("rightclick"):
 		motion.x = -MAXSPEED
 		facing_right = false
 		$AnimationPlayer.play("run")

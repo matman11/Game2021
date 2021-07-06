@@ -10,7 +10,7 @@ func _ready():
 
 	
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	if is_on_wall():
 		direction = direction * -1
 		if direction == 1:
