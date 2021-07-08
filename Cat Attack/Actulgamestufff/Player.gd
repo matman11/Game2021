@@ -3,22 +3,23 @@ extends KinematicBody2D
 const UP = Vector2(0, -1)
 const GRAVITY = 20
 const MAXFALLSPEED = 200
-const MAXSPEED = 150
+
 const JUMPFORCE = 325
 var health = 2
+var MAXSPEED = 150
 var jumpcount = 0
 var motion = Vector2()
 var facing_right = true
 var walljump = 500
 var jumpwall = 70
 var attacking = false
-var dashatt = 250
+var dashatt = 500
+var dashing = false
+
 func _ready():
 	pass 
 
 func _physics_process(_delta):
-	
-	
 
 	motion.y += GRAVITY
 	if motion.y > MAXFALLSPEED:
@@ -27,34 +28,22 @@ func _physics_process(_delta):
 	if facing_right == true:
 		$Sprite.scale.x = 1
 	else:
+		facing_right = false
 		$Sprite.scale.x = -1
-		
-	
-	
-
-		
-		
-	
 		
 		
 	if Input.is_action_pressed("rightclick"):
 		$AnimationPlayer.play("attack2")
 		
-																												
-			
-	if Input.is_action_pressed("right") and Input.is_action_pressed("rightclick"):
-		motion.x = -dashatt
-		facing_right == true
-	if Input.is_action_pressed("left") and Input.is_action_just_pressed("rightclick"):
-		motion.x = dashatt
-		facing_right == false
+	if Input.is_action_just_pressed("rightclick") and dashing == false:
+		dash()
 
-
-	if Input.is_action_pressed("right") and not Input.is_action_pressed("rightclick"):
+	if Input.is_action_pressed("right"):
 		motion.x = MAXSPEED
 		facing_right = true 
 		$AnimationPlayer.play("run")
-	elif Input.is_action_pressed("left") and not Input.is_action_pressed("rightclick"):
+		
+	elif Input.is_action_pressed("left"):
 		motion.x = -MAXSPEED
 		facing_right = false
 		$AnimationPlayer.play("run")
@@ -84,8 +73,9 @@ func _physics_process(_delta):
 		elif motion.y > 0:
 			$AnimationPlayer.play("falling")
 		
-	melee()
+	
 	motion = move_and_slide(motion, UP)
+	melee()
 
 func nextToWall():
 	return nextToRightWall() or nextToLeftWall()
@@ -121,8 +111,14 @@ func melee():
 				
 				
 		attacking = false
+
 				
-				
-				
-				
+func dash():
+	dashing = true 
+	if dashing and Input.is_action_pressed("right"):
+		motion.x = MAXSPEED * 4
+	if dashing and Input.is_action_pressed("left"):
+		motion.x = -MAXSPEED * 4
+	dashing = false
+	pass
 	
