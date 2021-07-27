@@ -32,11 +32,11 @@ func _physics_process(_delta):
 		$Sprite.scale.x = -1
 		
 		
-	if Input.is_action_pressed("rightclick"):
+	if Input.is_action_pressed("rightclick") and dashing == false:
 		$AnimationPlayer.play("attack2")
-		
-	if Input.is_action_just_pressed("rightclick") and dashing == false:
 		dash()
+		
+
 
 	if Input.is_action_pressed("right"):
 		motion.x = MAXSPEED
@@ -115,10 +115,8 @@ func melee():
 				
 func dash():
 	dashing = true 
-	if dashing and Input.is_action_pressed("right"):
-		motion.x = MAXSPEED * 4
-	if dashing and Input.is_action_pressed("left"):
-		motion.x = -MAXSPEED * 4
+	if dashing == true and Input.is_action_just_pressed("rightclick"):
+		motion.x = dashatt
 	dashing = false
 	pass
 	
