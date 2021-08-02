@@ -116,7 +116,16 @@ position = Vector2( 0, 23.9296 )
 position = Vector2( 96, 24 )
 
 [node name="fullgrass4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 144, 24 )
+position = Vector2( 144, 23.8345 )
+
+[node name="fullgrass136" parent="." instance=ExtResource( 3 )]
+position = Vector2( 152, -64 )
+
+[node name="fullgrass137" parent="." instance=ExtResource( 3 )]
+position = Vector2( 152, -168 )
+
+[node name="fullgrass138" parent="." instance=ExtResource( 3 )]
+position = Vector2( 152, -312 )
 
 [node name="fullgrass5" parent="." instance=ExtResource( 3 )]
 position = Vector2( -48, 24 )
