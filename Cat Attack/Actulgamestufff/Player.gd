@@ -8,19 +8,22 @@ const JUMPFORCE = 325
 var health = 2
 var MAXSPEED = 150
 var jumpcount = 0
-var motion = Vector2()
+onready var motion = Vector2()
 var facing_right = true
 var walljump = 500
 var jumpwall = 70
 var attacking = false
-var dashatt = 500
+var dashdirection = Vector2(1, 0)
+onready var candash = true 
 var dashing = false
 
 func _ready():
 	pass 
 
 func _physics_process(_delta):
-
+	if is_on_floor():
+		candash = true
+	dash()
 	motion.y += GRAVITY
 	if motion.y > MAXFALLSPEED:
 		motion.y = MAXFALLSPEED
@@ -30,13 +33,6 @@ func _physics_process(_delta):
 	else:
 		facing_right = false
 		$Sprite.scale.x = -1
-		
-		
-	if Input.is_action_pressed("rightclick") and dashing == false:
-		$AnimationPlayer.play("attack2")
-		dash()
-		
-
 
 	if Input.is_action_pressed("right"):
 		motion.x = MAXSPEED
@@ -63,7 +59,6 @@ func _physics_process(_delta):
 			motion.y -= jumpwall
 	if is_on_floor() or nextToWall():
 		jumpcount = 1
-		
 	
 			
 	
@@ -111,12 +106,13 @@ func melee():
 				
 				
 		attacking = false
-
-				
 func dash():
-	dashing = true 
-	if dashing == true and Input.is_action_just_pressed("rightclick"):
-		motion.x = dashatt
-	dashing = false
-	pass
-	
+	if Input.is_action_pressed("rightclick") and candash:
+		MAXSPEED = 450
+		candash = false
+		dashing = true
+		yield(get_tree().create_timer(0.1), "timeout")
+		dashing = false
+		MAXSPEED = 150
+
+

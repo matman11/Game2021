@@ -105,7 +105,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 10, 15.0226 )
+extents = Vector2( 10.5349, 15.0226 )
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 0, -20 )
@@ -132,7 +132,6 @@ zoom = Vector2( 0.3, 0.3 )
 smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( 2.5, 6.5 )
 shape = SubResource( 2 )
 
@@ -159,12 +158,11 @@ enabled = true
 cast_to = Vector2( 0, 15 )
 
 [node name="hitbox" type="Area2D" parent="."]
-visible = false
 position = Vector2( 2.5, 6.5 )
 collision_mask = 16
 
 [node name="boxhit" type="CollisionShape2D" parent="hitbox"]
-position = Vector2( -4.08739, -0.297634 )
+position = Vector2( -0.528911, -0.578571 )
 scale = Vector2( -1.15649, 0.798592 )
 shape = SubResource( 9 )
 
