@@ -26,13 +26,6 @@ func _physics_process(_delta):
 	
 
 
-
-
-
-
-
-
-
-
-
-
+func _on_hurtbox_body_entered(body):
+	if body.name == "player":
+		$AnimationPlayer.play("death")

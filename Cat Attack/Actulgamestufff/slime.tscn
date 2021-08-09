@@ -278,7 +278,7 @@ position = Vector2( 0, -3.93726 )
 texture = ExtResource( 1 )
 hframes = 8
 vframes = 3
-frame = 4
+frame = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -310,6 +310,7 @@ visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="damagedeal"]
 shape = SubResource( 6 )
+disabled = true
 
 [node name="hurtbox" type="Area2D" parent="." groups=[
 "hurtbox",
@@ -319,3 +320,6 @@ visible = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
 position = Vector2( 0, 0.72838 )
 shape = SubResource( 7 )
+disabled = true
+
+[connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]

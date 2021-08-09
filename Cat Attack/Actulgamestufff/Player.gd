@@ -70,8 +70,7 @@ func _physics_process(_delta):
 		
 	
 	motion = move_and_slide(motion, UP)
-	melee()
-
+	
 func nextToWall():
 	return nextToRightWall() or nextToLeftWall()
 
@@ -94,25 +93,21 @@ func _on_hitbox_body_entered(body):
 		
 
 
-func melee():
-	if Input.is_action_just_pressed("leftclick"):
-		var checkenemy = $Sprite/swordhit.get_overlapping_bodies()
-		attacking = true
-		print("attacking")
-		for slime in checkenemy:
-			if slime.is_in_group("hurtbox"):
-				print("dead")
-				slime.queue_free()
-				
-				
-		attacking = false
+
 func dash():
-	if Input.is_action_pressed("rightclick") and candash:
+	if Input.is_action_just_pressed("rightclick") and candash:
+		
+		$Sprite/swordhit/WeaponAni.play("Dashattack")
+	
 		MAXSPEED = 450
 		candash = false
 		dashing = true
-		yield(get_tree().create_timer(0.1), "timeout")
+		
+		yield(get_tree().create_timer(0.15), "timeout")
 		dashing = false
 		MAXSPEED = 150
+
+
+
 
 
