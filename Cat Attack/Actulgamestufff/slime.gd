@@ -4,13 +4,13 @@ export var direction = -1
  
 
 
-func _ready():
-	$AnimationPlayer.play("idle")
 
 
-	
-	
+
+
 func _physics_process(_delta):
+	if is_on_floor():
+		$AnimationPlayer.play("slide")
 	if is_on_wall():
 		direction = direction * -1
 		if direction == 1:
@@ -29,3 +29,9 @@ func _physics_process(_delta):
 func _on_hurtbox_body_entered(body):
 	if body.name == "player":
 		$AnimationPlayer.play("death")
+
+
+func _on_damagedeal_area_entered(area):
+	$AnimationPlayer.play("attck")
+	
+

@@ -199,6 +199,7 @@ tracks/4/keys = {
 }
 
 [sub_resource type="Animation" id=5]
+resource_name = "slide"
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -263,7 +264,7 @@ tracks/4/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 14.375, 7.47838 )
+extents = Vector2( 17.625, 7.47838 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 16.5926, 8.1262 )
@@ -278,7 +279,7 @@ position = Vector2( 0, -3.93726 )
 texture = ExtResource( 1 )
 hframes = 8
 vframes = 3
-frame = 17
+frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -289,37 +290,35 @@ shape = SubResource( 1 )
 anims/attck = SubResource( 2 )
 anims/death = SubResource( 3 )
 anims/idle = SubResource( 4 )
-anims/siide = SubResource( 5 )
+anims/slide = SubResource( 5 )
 
 [node name="leftwall" type="RayCast2D" parent="."]
-visible = false
 position = Vector2( 5.03969, 0 )
 rotation = 1.5708
 scale = Vector2( 1, 0.5 )
 enabled = true
 
 [node name="rightwall" type="RayCast2D" parent="."]
-visible = false
 position = Vector2( -5.216, 0 )
 rotation = -1.5708
 scale = Vector2( 1, 0.5 )
 enabled = true
 
 [node name="damagedeal" type="Area2D" parent="."]
-visible = false
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="damagedeal"]
 shape = SubResource( 6 )
-disabled = true
 
 [node name="hurtbox" type="Area2D" parent="." groups=[
 "hurtbox",
 ]]
 visible = false
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
 position = Vector2( 0, 0.72838 )
 shape = SubResource( 7 )
-disabled = true
 
+[connection signal="area_entered" from="damagedeal" to="." method="_on_damagedeal_area_entered"]
 [connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]

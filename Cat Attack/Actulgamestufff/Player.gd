@@ -46,7 +46,9 @@ func _physics_process(_delta):
 	else:
 		motion.x = 0 
 		$AnimationPlayer.play("idle")
-	
+	if Input.is_action_just_pressed("leftclick"):
+		$Sprite/swordhit/WeaponAni.play("normattack")
+		
 	if Input.is_action_just_pressed("jump") and jumpcount <2:
 		motion.y = -JUMPFORCE
 		jumpcount += 1
@@ -95,8 +97,8 @@ func _on_hitbox_body_entered(body):
 
 
 func dash():
-	if Input.is_action_just_pressed("rightclick") and candash:
-		
+	if Input.is_action_pressed("rightclick") and candash:
+		$AnimationPlayer.stop()
 		$Sprite/swordhit/WeaponAni.play("Dashattack")
 	
 		MAXSPEED = 450
