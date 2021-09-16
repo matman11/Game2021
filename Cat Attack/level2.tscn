@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://tiesethtnagsh.tres" type="TileSet" id=1]
 [ext_resource path="res://halfslab.tres" type="TileSet" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://CHUD.tscn" type="PackedScene" id=7]
 [ext_resource path="res://signbert-removebg-preview.png" type="Texture" id=8]
 [ext_resource path="res://Platformer12-HUD-coin-font/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Actulgamestufff/owlnboi.jpg" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1567.67, 47.8757 )
@@ -149,6 +150,11 @@ text = "This way
 __meta__ = {
 "_edit_use_anchors_": true
 }
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 2608.25, -986.469 )
+scale = Vector2( 0.0690136, 0.0690136 )
+texture = ExtResource( 10 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 120, -80 )

@@ -23,6 +23,7 @@ func _ready():
 func _physics_process(_delta):
 	if is_on_floor():
 		candash = true
+		
 	dash()
 	motion.y += GRAVITY
 	if motion.y > MAXFALLSPEED:
