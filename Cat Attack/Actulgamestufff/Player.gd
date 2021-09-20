@@ -92,6 +92,8 @@ func _on_hitbox_body_entered(body):
 		print(health)
 		
 	if body.name == ("Slime") and health == 0:
+		$AnimationPlayer.play("Death")
+		
 		get_tree().reload_current_scene()
 		
 
