@@ -20,7 +20,7 @@ size = 11
 use_filter = true
 font_data = ExtResource( 5 )
 
-[node name="Node2D" type="Node2D"]
+[node name="level1" type="Node2D"]
 position = Vector2( 7.1272, 19.5997 )
 
 [node name="Winsign1" type="Sprite" parent="."]

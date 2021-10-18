@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://titlesceen.gd" type="Script" id=1]
+[ext_resource path="res://Platformer12-HUD-coin-font/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 27.3394
+margin_top = -178.357
+margin_right = 218.339
+margin_bottom = 38.6426
+rect_scale = Vector2( 1.7, 1.7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start" type="Button" parent="VBoxContainer"]
+margin_right = 191.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 1 )
+text = "Start"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="options" type="Button" parent="VBoxContainer"]
+margin_top = 30.0
+margin_right = 191.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 2 )
+text = "Options"
+
+[node name="exit" type="Button" parent="VBoxContainer"]
+margin_top = 60.0
+margin_right = 191.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 3 )
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]

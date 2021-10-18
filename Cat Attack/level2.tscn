@@ -19,7 +19,7 @@ size = 25
 use_filter = true
 font_data = ExtResource( 9 )
 
-[node name="Node2D" type="Node2D"]
+[node name="level2" type="Node2D"]
 
 [node name="Fullblocks" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )

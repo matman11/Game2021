@@ -18,6 +18,11 @@ config/name="Cat Attack"
 run/main_scene="res://Actulgamestufff/level1Game.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1280
+window/size/height=720
+
 [input]
 
 right={
@@ -57,3 +62,5 @@ rightclick={
 [rendering]
 
 environment/default_environment="res://default_env.tres"
+environment/size/height=600
+environment/size/width=1024
