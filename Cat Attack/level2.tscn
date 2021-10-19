@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://tiesethtnagsh.tres" type="TileSet" id=1]
 [ext_resource path="res://halfslab.tres" type="TileSet" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://signbert-removebg-preview.png" type="Texture" id=8]
 [ext_resource path="res://Platformer12-HUD-coin-font/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Actulgamestufff/owlnboi.jpg" type="Texture" id=10]
+[ext_resource path="res://soundsandmusic (1)/music/Retro Beat.ogg" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1567.67, 47.8757 )
@@ -159,6 +160,11 @@ texture = ExtResource( 10 )
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 120, -80 )
 scale = Vector2( 1.5, 1.5 )
+
+[node name="Level2music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -12.0
+autoplay = true
 
 [connection signal="coin_collected" from="coin" to="CHUD" method="_on_coin_coin_collected"]
 [connection signal="coin_collected" from="coin2" to="CHUD" method="_on_coin_coin_collected"]

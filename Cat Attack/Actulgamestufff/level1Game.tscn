@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Actulgamestufff/level1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Actulgamestufff/Playerbrr.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://signbert-removebg-preview.png" type="Texture" id=4]
 [ext_resource path="res://Platformer12-HUD-coin-font/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Actulgamestufff/Winarea.gd" type="Script" id=6]
+[ext_resource path="res://soundsandmusic (1)/music/Retro Beat.ogg" type="AudioStream" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 21.4092, 19.0385 )
@@ -98,5 +99,10 @@ position = Vector2( 420.586, 45.6264 )
 
 [node name="Slime3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 242.25, 46.1303 )
+
+[node name="Levelmusic1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -12.0
+autoplay = true
 
 [connection signal="body_entered" from="Winsign1/Winarea" to="Winsign1/Winarea" method="_on_Winarea_body_entered"]

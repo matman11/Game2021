@@ -10,6 +10,7 @@ func _on_coin_body_entered(body):
 		emit_signal("coin_collected")
 		$AnimationPlayer.play("Ctaken")
 		yield($AnimationPlayer, "animation_finished")
+		
 
 			
 

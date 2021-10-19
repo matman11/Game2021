@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://platform_metroidvania asset pack v1.01/platform_metroidvania asset pack v1.01/miscellaneous sprites/coin_anim_strip_6.png" type="Texture" id=1]
 [ext_resource path="res://Actulgamestufff/CoinAn.gd" type="Script" id=2]
+[ext_resource path="res://soundsandmusic (1)/sounds/question_003.ogg" type="AudioStream" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 4.7391
@@ -126,3 +127,7 @@ frame = 3
 autoplay = "coin1"
 anims/Ctaken = SubResource( 2 )
 anims/coin1 = SubResource( 3 )
+
+[node name="Pickupsounds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -8.0

@@ -8,4 +8,5 @@ func _ready():
 
 func _on_coin_coin_collected():
 	coins = coins + 1
+	$AudioStreamPlayer.play()
 	_ready()
