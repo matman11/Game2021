@@ -1,7 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://viking/viking/viking2.png" type="Texture" id=1]
 [ext_resource path="res://Actulgamestufff/Player.gd" type="Script" id=2]
+[ext_resource path="res://soundsandmusic (1)/sounds/456367__felixyadomi__hop2.wav" type="AudioStream" id=3]
+[ext_resource path="res://soundsandmusic (1)/sounds/jingles_PIZZA07.ogg" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6.26972, 10 )
@@ -209,5 +211,15 @@ collision_mask = 16
 position = Vector2( -0.528911, -0.578571 )
 scale = Vector2( -1.15649, 0.798592 )
 shape = SubResource( 10 )
+
+[node name="Jumpsfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -18.0
+
+[node name="deathsfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -8.0
+
+[node name="swordsfx" type="AudioStreamPlayer" parent="."]
 
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

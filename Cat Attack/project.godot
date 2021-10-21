@@ -18,6 +18,10 @@ config/name="Cat Attack"
 run/main_scene="res://Actulgamestufff/level1Game.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globalsounds="*res://globalsounds.gd"
+
 [display]
 
 window/size/width=1280

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/456367__felixyadomi__hop2.wav-4044a2135300c6f6947af364f5d2791c.sample"
+
+[deps]
+
+source_file="res://soundsandmusic (1)/sounds/456367__felixyadomi__hop2.wav"
+dest_files=[ "res://.import/456367__felixyadomi__hop2.wav-4044a2135300c6f6947af364f5d2791c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

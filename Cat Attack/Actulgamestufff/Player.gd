@@ -47,10 +47,13 @@ func _physics_process(_delta):
 	else:
 		motion.x = 0 
 		$AnimationPlayer.play("idle")
+		
 	if Input.is_action_just_pressed("leftclick"):
 		$Sprite/swordhit/WeaponAni.play("normattack")
 		
+		
 	if Input.is_action_just_pressed("jump") and jumpcount <2:
+		$Jumpsfx.play()
 		motion.y = -JUMPFORCE
 		jumpcount += 1
 		if not is_on_floor() and nextToRightWall():
@@ -92,8 +95,10 @@ func _on_hitbox_body_entered(body):
 		print(health)
 		
 	if body.name == ("Slime") and health == 0:
-		$AnimationPlayer.play("Death")
 		
+		$deathsfx.play()
+		$AnimationPlayer.play("Death")
+		yield(get_tree().create_timer(1.33), "timeout")
 		get_tree().reload_current_scene()
 		
 
