@@ -5,18 +5,9 @@ func _ready():
 
 signal coin_collected
 
-func _on_coin_body_entered(body):
+
+func _on_Coin_body_entered(body):
 	if body.name == ("Player"):
 		emit_signal("coin_collected")
 		$AnimationPlayer.play("Ctaken")
 		yield($AnimationPlayer, "animation_finished")
-		
-
-			
-
-
-
-
-
-
-
