@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://menus.gd" type="Script" id=1]
-[ext_resource path="res://soundsandmusic (1)/music/Thatched Villagers.mp3" type="AudioStream" id=2]
+[ext_resource path="res://soundsandmusic (1)/music/Kevin MacLeod - Lord of the Land.mp3" type="AudioStream" id=2]
 
 [node name="menus" type="Control"]
 anchor_right = 1.0

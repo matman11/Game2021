@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Kevin MacLeod - Lord of the Land.mp3-7d7c699b5e58f225e3ab0e0c27849079.mp3str"
+
+[deps]
+
+source_file="res://soundsandmusic (1)/music/Kevin MacLeod - Lord of the Land.mp3"
+dest_files=[ "res://.import/Kevin MacLeod - Lord of the Land.mp3-7d7c699b5e58f225e3ab0e0c27849079.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

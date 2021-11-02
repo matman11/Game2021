@@ -12,7 +12,7 @@ func _on_Music_db_value_changed(value: float) -> void:
 		Globalsounds.music_enabled = false
 	else:
 		Globalsounds.music_enabled = true 
-	
+
 
 
 
