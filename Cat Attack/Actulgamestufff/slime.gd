@@ -27,11 +27,11 @@ func _physics_process(_delta):
 
 
 func _on_hurtbox_body_entered(body):
-	if body.name == "player":
+	if body.name == "Player":
 		$AnimationPlayer.play("death")
+
+
 
 
 func _on_damagedeal_area_entered(area):
 	$AnimationPlayer.play("attck")
-	
-

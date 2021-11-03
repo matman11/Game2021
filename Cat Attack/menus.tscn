@@ -1,42 +1,117 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://menus.gd" type="Script" id=1]
 [ext_resource path="res://soundsandmusic (1)/music/Kevin MacLeod - Lord of the Land.mp3" type="AudioStream" id=2]
+[ext_resource path="res://platformer-p15-assets/more fonts/KiriFont.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+outline_size = 9
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 3
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+outline_size = 2
+outline_color = Color( 0.176471, 0.682353, 0, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 36
+outline_size = 2
+outline_color = Color( 0, 0.572549, 0.560784, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 36
+outline_size = 2
+outline_color = Color( 0.741176, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
 
 [node name="menus" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -7.56805
+margin_top = 2.37921
+margin_right = -7.56812
+margin_bottom = 2.37921
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="start" type="Button" parent="VBoxContainer"]
-margin_right = 60.0
-margin_bottom = 20.0
-text = "start"
-
-[node name="options" type="Button" parent="VBoxContainer"]
-margin_top = 24.0
-margin_right = 60.0
-margin_bottom = 44.0
-text = "options"
-
-[node name="exit" type="Button" parent="VBoxContainer"]
-margin_top = 48.0
-margin_right = 60.0
-margin_bottom = 68.0
-text = "exit"
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1295.0
+margin_bottom = 720.0
+color = Color( 0.160784, 0, 0.419608, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 volume_db = -12.0
 autoplay = true
 
-[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]
+[node name="Label" type="Label" parent="."]
+margin_left = 415.916
+margin_top = 76.7182
+margin_right = 868.916
+margin_bottom = 290.718
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.4, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.235294, 0.231373, 0.231373, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 3
+text = " Slime 
+Slayer"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start" type="Button" parent="."]
+margin_left = 566.306
+margin_top = 285.956
+margin_right = 726.306
+margin_bottom = 327.956
+custom_fonts/font = SubResource( 2 )
+text = "start"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="options" type="Button" parent="."]
+margin_left = 544.463
+margin_top = 338.138
+margin_right = 747.463
+margin_bottom = 380.138
+custom_fonts/font = SubResource( 3 )
+text = "options"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exit" type="Button" parent="."]
+margin_left = 594.367
+margin_top = 388.495
+margin_right = 702.367
+margin_bottom = 430.495
+custom_fonts/font = SubResource( 4 )
+text = "exit"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
