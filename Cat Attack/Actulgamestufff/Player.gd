@@ -21,6 +21,9 @@ func _ready():
 	pass 
 
 func _physics_process(_delta):
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().change_scene("res://options.tscn")
+		
 	if is_on_floor():
 		candash = true
 		
@@ -99,7 +102,7 @@ func _on_hitbox_body_entered(body):
 		$deathsfx.play()
 		$AnimationPlayer.play("Death")
 		yield(get_tree().create_timer(1.33), "timeout")
-		get_tree().reload_current_scene()
+		get_tree().change_scene("res://deathscreen.tscn")
 		
 
 

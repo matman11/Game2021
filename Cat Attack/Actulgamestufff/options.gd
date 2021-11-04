@@ -24,3 +24,7 @@ func _on_SFX_db_value_changed(value):
 	else:
 		Globalsounds.fx_enabled = true
 	
+
+
+func _on_Back_pressed():
+	get_tree().change_scene("res://menus.tscn")

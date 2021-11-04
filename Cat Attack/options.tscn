@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Platformer12-HUD-coin-font/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Actulgamestufff/options.gd" type="Script" id=2]
 [ext_resource path="res://soundsandmusic (1)/music/Suonatore di Liuto.mp3" type="AudioStream" id=3]
+[ext_resource path="res://platformer-p15-assets/more fonts/KiriFont.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -10,13 +11,20 @@ font_data = ExtResource( 1 )
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 1 )
 
+[sub_resource type="DynamicFont" id=3]
+size = 20
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+
 [node name="options" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -0.658386
-margin_top = -2.00229
-margin_right = -0.658447
-margin_bottom = -2.00232
+margin_left = -6.65839
+margin_top = 16.9977
+margin_right = -6.65845
+margin_bottom = 16.9977
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -84,5 +92,18 @@ __meta__ = {
 stream = ExtResource( 3 )
 autoplay = true
 
+[node name="Back" type="Button" parent="."]
+margin_left = 581.141
+margin_top = 459.98
+margin_right = 702.141
+margin_bottom = 482.98
+custom_fonts/font = SubResource( 3 )
+text = "Main menu"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="value_changed" from="Music_db" to="." method="_on_Music_db_value_changed"]
 [connection signal="value_changed" from="SFX_db" to="." method="_on_SFX_db_value_changed"]
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]

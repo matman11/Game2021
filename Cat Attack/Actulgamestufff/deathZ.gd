@@ -6,4 +6,4 @@ func _ready():
 	
 func _on_deathZ_body_entered(body):
 	if body.name == ("Player"):
-		get_tree().reload_current_scene()
+		get_tree().change_scene("res://deathscreen.tscn")
