@@ -10,4 +10,4 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	if body.name == ("Player"):
-		get_tree().change_scene("res://Actulgamestufff/level2.tscn")
+		get_tree().change_scene("res://Winscreen.tscn")

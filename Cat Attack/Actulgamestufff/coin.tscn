@@ -130,6 +130,6 @@ anims/coin1 = SubResource( 3 )
 
 [node name="Pickupsounds" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-volume_db = -8.0
+volume_db = -80.0
 
 [connection signal="body_entered" from="." to="." method="_on_Coin_body_entered"]

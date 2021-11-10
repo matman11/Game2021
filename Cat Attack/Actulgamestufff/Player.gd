@@ -108,7 +108,7 @@ func _on_hitbox_body_entered(body):
 
 
 func dash():
-	if Input.is_action_pressed("rightclick") and candash:
+	if Input.is_action_just_pressed("rightclick") and candash:
 		$AnimationPlayer.stop()
 		$Sprite/swordhit/WeaponAni.play("Dashattack")
 	

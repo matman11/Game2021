@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://tiesethtnagsh.tres" type="TileSet" id=1]
 [ext_resource path="res://halfslab.tres" type="TileSet" id=2]
@@ -11,12 +11,22 @@
 [ext_resource path="res://Platformer12-HUD-coin-font/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Actulgamestufff/owlnboi.jpg" type="Texture" id=10]
 [ext_resource path="res://soundsandmusic (1)/music/Retro Beat.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Actulgamestufff/win.gd" type="Script" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1567.67, 47.8757 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 25
+use_filter = true
+font_data = ExtResource( 9 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 115.516, 88.0911 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 26
+outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
 font_data = ExtResource( 9 )
 
@@ -158,13 +168,42 @@ scale = Vector2( 0.0690136, 0.0690136 )
 texture = ExtResource( 10 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 120, -80 )
+position = Vector2( 5625.74, -1221.53 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Level2music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 volume_db = -12.0
 autoplay = true
+
+[node name="Winsign" type="Sprite" parent="."]
+position = Vector2( 5475.54, -1171.5 )
+scale = Vector2( 0.173531, 0.173531 )
+texture = ExtResource( 8 )
+script = ExtResource( 12 )
+
+[node name="Area2D" type="Area2D" parent="Winsign"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Winsign/Area2D"]
+position = Vector2( -31.7314, -28.846 )
+shape = SubResource( 3 )
+
+[node name="Label" type="Label" parent="Winsign"]
+margin_left = -207.865
+margin_top = -115.793
+margin_right = 144.135
+margin_bottom = 17.207
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Well done for 
+beating level 2!
+touch me to
+ play again
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [connection signal="coin_collected" from="coin" to="CHUD" method="_on_coin_coin_collected"]
 [connection signal="coin_collected" from="coin2" to="CHUD" method="_on_coin_coin_collected"]
@@ -182,3 +221,4 @@ autoplay = true
 [connection signal="coin_collected" from="coin14" to="CHUD" method="_on_coin_coin_collected"]
 [connection signal="coin_collected" from="coin15" to="CHUD" method="_on_coin_coin_collected"]
 [connection signal="body_entered" from="death2" to="death2" method="_on_death2_body_entered"]
+[connection signal="body_entered" from="Winsign/Area2D" to="Winsign" method="_on_Area2D_body_entered"]

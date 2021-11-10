@@ -130,4 +130,4 @@ anims/coin1 = SubResource( 3 )
 
 [node name="Pickupsounds" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-volume_db = -8.0
+volume_db = -14.0
